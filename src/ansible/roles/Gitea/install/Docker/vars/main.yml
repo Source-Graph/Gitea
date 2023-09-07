@@ -4,3 +4,6 @@ docker_compose_file: "{{ docker_dir }}/docker-compose.yml"
 
 UID: 1000
 GID: "{{ UID }}"
+
+container_gitea_image: docker.io/gitea/gitea  #:latest
+container_mysql_image: docker.io/library/mysql:8

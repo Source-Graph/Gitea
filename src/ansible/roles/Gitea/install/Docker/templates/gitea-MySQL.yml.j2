@@ -4,13 +4,15 @@ networks:
   gitea:
     external: false
 
+volumes:
+  gitea:
+    driver: local
+
 services:
   server:
-    image: gitea/gitea:latest
+    image: {{ container_gitea_image }}
     container_name: gitea
     environment:
-      - USER_UID={{ UID }}
-      - USER_GID={{ GID }}
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306
       - GITEA__database__NAME=gitea
@@ -20,9 +22,9 @@ services:
     networks:
       - gitea
     volumes:
-      - ./gitea:/data
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
+      - gitea:/data
+#      - /etc/timezone:/etc/timezone:ro
+#      - /etc/localtime:/etc/localtime:ro
     ports:
       - "{{ port_web_server }}"
       - "{{ port_ssh }}"
@@ -30,7 +32,7 @@ services:
       - db
 
   db:
-    image: mysql:8
+    image: {{ container_mysql_image }}
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=gitea

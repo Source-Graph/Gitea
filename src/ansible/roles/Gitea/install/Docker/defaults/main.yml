@@ -1,8 +1,11 @@
+database: MySQL  #sqlite, PostgreSQL
+
+port_ssh: "2221:22" # "2221" works on: Fedora Silverblue! "222" doesn't work
+port_web_server: "3000:3000"
+
 root_dir: "~/.uni/repo/gitea"
 
-version: MySQL  #sqlite
-
-port_ssh: "222:22"
-port_web_server: "3000:3000"
+# TODO
+Named_volumes: True  # https://docs.gitea.com/installation/install-with-docker#named-volumes
 
 openvswitch: True  # https://docs.gitea.com/installation/install-with-docker#ssh-container-passthrough
