@@ -1,6 +1,8 @@
 root_dir: "~/.uni/repo/gitea"
 
-version: sqlite
+version: MySQL  #sqlite
 
 port_ssh: "222:22"
 port_web_server: "3000:3000"
+
+openvswitch: True  # https://docs.gitea.com/installation/install-with-docker#ssh-container-passthrough
