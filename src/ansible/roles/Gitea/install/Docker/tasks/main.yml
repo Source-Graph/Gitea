@@ -3,16 +3,8 @@
 
 - name: Create directory for Gitea
   ansible.builtin.file:
-    path: "{{ docker_dir }}/gitea"
+    path: "{{ docker_dir }}"
     state: directory
-
-- name: Create directory for Docker volume
-  ansible.builtin.file:
-    path: "{{ docker_dir }}/gitea"
-    state: directory
-    owner: "{{ UID }}"
-    group: "{{ GID }}"
-
 
 - name: Template docker-compose.yml
   ansible.builtin.template:
