@@ -1,0 +1,1 @@
+podman_exec: "podman exec -it gitea"

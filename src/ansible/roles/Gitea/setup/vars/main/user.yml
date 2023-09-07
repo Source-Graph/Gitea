@@ -1,0 +1,1 @@
+create_user: "gitea admin user create --admin --username {{ admin_user }} --password {{ admin_password }} --email {{ admin_email }} --must-change-password=false"

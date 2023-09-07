@@ -3,4 +3,5 @@
     ansible_become_password: u
 
   roles:
-  - Gitea/install/Docker
+  - Gitea/install
+  - Gitea/setup

@@ -1,0 +1,3 @@
+create_empty_volume: podman volume create docker_gitea
+
+import_volume: "podman volume import docker_gitea ./bac/docker_gitea.user.tar"
