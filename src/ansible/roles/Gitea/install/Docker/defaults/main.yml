@@ -1,4 +1,7 @@
-database: MySQL  #sqlite, PostgreSQL
+# database: MySQL  #sqlite, PostgreSQL
+database: sqlite
+
+# https://docs.gitea.com/next/installation/install-with-docker#managing-deployments-with-environment-variables
 
 port_ssh: "2221:22" # "2221" works on: Fedora Silverblue! "222" doesn't work
 port_web_server: "3000:3000"

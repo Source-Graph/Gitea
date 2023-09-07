@@ -1,0 +1,3 @@
+podman-compose down
+
+podman volume prune
