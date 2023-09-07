@@ -1,0 +1,19 @@
+---
+# from: https://docs.gitea.com/installation/install-with-docker
+- name: Create directory for Gitea
+  ansible.builtin.file:
+    path: "{{ docker_dir }}/gitea"
+    state: directory
+
+- name: Create directory for Docker volume
+  ansible.builtin.file:
+    path: "{{ docker_dir }}/gitea"
+    state: directory
+    owner: "{{ UID }}"
+    group: "{{ GID }}"
+
+
+- name: Template docker-compose.yml
+  ansible.builtin.template:
+    src: "gitea-{{ version }}.yml.j2"
+    dest: "{{ docker_compose_file }}"

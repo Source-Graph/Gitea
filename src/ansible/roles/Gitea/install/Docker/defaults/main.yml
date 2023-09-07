@@ -1,0 +1,6 @@
+root_dir: "~/.uni/repo/gitea"
+
+version: sqlite
+
+port_ssh: "222:22"
+port_web_server: "3000:3000"

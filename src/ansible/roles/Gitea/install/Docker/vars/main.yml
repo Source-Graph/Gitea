@@ -1,0 +1,6 @@
+docker_dir: "{{ root_dir }}/docker"
+
+docker_compose_file: "{{ docker_dir }}/docker-compose.yml"
+
+UID: 1000
+GID: "{{ UID }}"
