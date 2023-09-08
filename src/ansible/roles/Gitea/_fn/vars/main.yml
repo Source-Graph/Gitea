@@ -2,4 +2,4 @@ as_user: "--user={{ admin_user }}"
 
 podman_exec: "podman exec {{ as_user }} -it {{ container_name }}"
 
-debug_shell: "podman exec -it gitea /bin/bash"
+debug_shell: "podman exec {{ as_user }} -it gitea /bin/bash"
