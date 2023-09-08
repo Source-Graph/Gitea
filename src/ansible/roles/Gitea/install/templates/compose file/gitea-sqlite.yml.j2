@@ -12,6 +12,10 @@ services:
   server:
     image: {{ container_gitea_image }}
     container_name: {{ container_name }}
+    environment:
+      - USER=git
+      - USER_UID=1000
+      - USER_GID=1000
     restart: always
     networks:
       - gitea

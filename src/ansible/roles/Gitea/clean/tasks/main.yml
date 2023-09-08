@@ -1,4 +1,9 @@
-podman-compose down
+- name: Is container running?
+  ansible.builtin.include_tasks: "../_fn/tasks/is_running.yml"
 
-podman volume rm docker_gitea -y
-#podman volume prune
+- name: Podman-compose Down
+  ansible.builtin.shell: podman-compose down
+  args:
+    chdir: "{{ container_dir }}"
+  when: is_up.rc == 0
+  notify: Podman Delete volume

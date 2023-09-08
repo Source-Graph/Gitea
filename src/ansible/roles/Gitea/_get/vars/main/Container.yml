@@ -2,6 +2,8 @@ root_dir: "~/.uni/repo/gitea"
 
 container_name: gitea
 
+volume_name: container_gitea
+
 container_dir: "{{ root_dir }}/container"
 
 container_compose_file: "{{ container_dir }}/docker-compose.yml"

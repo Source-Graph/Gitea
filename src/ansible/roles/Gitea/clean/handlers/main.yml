@@ -1,0 +1,7 @@
+- name: Podman Delete volume
+  ansible.builtin.shell: podman volume rm {{ volume_name }}
+  args:
+    chdir: "{{ container_dir }}"
+
+# Alt: 
+# podman volume prune

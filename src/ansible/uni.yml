@@ -5,3 +5,6 @@
   roles:
   - Gitea/install
   - Gitea/setup
+
+  - role: Gitea/clean
+    tags: [ clean ]
