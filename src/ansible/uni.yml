@@ -3,6 +3,7 @@
     ansible_become_password: u
 
   roles:
+  # DO: Need to figure out how to automate the install! using `gitea web --install`?
   - Gitea/install
 
   - role: Gitea/setup
