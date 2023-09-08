@@ -1,3 +1,4 @@
 podman-compose down
 
-podman volume prune
+podman volume rm docker_gitea -y
+#podman volume prune

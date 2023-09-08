@@ -1,0 +1,9 @@
+# TODO
+
+- name: Delete volume
+  containers.podman.podman_container:
+    name: gitea
+    image: "{{ container_image }}"
+    state: absent
+    volume:
+      - docker_gitea

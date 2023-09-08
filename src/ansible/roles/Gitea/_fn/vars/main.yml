@@ -1,1 +1,5 @@
-podman_exec: "podman exec -it gitea"
+as_user: "--user={{ admin_user }}"
+
+podman_exec: "podman exec {{ as_user }} -it {{ container_name }}"
+
+debug_shell: "podman exec -it gitea /bin/bash"

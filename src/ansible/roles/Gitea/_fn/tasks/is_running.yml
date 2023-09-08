@@ -1,0 +1,5 @@
+- name: Is container running?
+  command: "podman container inspect {{ container_name }}"
+  register: is_up
+  changed_when: false
+  failed_when: false

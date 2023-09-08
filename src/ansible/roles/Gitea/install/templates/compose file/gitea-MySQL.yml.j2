@@ -11,7 +11,7 @@ volumes:
 services:
   server:
     image: {{ container_gitea_image }}
-    container_name: gitea
+    container_name: {{ container_name }}
     environment:
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306

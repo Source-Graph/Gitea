@@ -1,6 +1,4 @@
-- name: Create admin user
-  ansible.builtin.shell: "{{ podman_exec }} {{ create_user }}"
-  when: false
-
-- debug:
-    msg: "{{ podman_exec }} {{ create_user }}"
+- name: setup tasks
+  ansible.builtin.include_tasks: "{{ item }}.yml"
+  loop:
+  - Create User

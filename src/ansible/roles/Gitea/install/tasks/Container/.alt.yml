@@ -1,7 +1,7 @@
 # If not Named_volumes
 - name: Create directory for Docker volume
   ansible.builtin.file:
-    path: "{{ docker_dir }}/gitea"
+    path: "{{ container_dir }}/gitea"
     state: directory
     owner: "{{ UID }}"
     group: "{{ GID }}"
