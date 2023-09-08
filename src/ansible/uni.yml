@@ -7,4 +7,4 @@
   - Gitea/setup
 
   - role: Gitea/clean
-    tags: [ clean ]
+    tags: [ clean, never ]
