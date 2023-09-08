@@ -1,0 +1,1 @@
+user_created_stdout: "New user '{{ username }}' has been successfully created!"

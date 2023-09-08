@@ -4,7 +4,9 @@
 
   roles:
   - Gitea/install
-  - Gitea/setup
+
+  - role: Gitea/setup
+    tags: [ setup ]
 
   - role: Gitea/clean
     tags: [ clean, never ]

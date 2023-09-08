@@ -1,12 +1,11 @@
 - name: Is container running?
   ansible.builtin.include_tasks: "../_fn/tasks/is_running.yml"
 
-# - name: Create admin user
-#   ansible.builtin.shell: "{{ podman_exec }} {{ create_user }}"
-#   when: is_up.rc == 0
+- name: Create admin user
+  ansible.builtin.shell: "{{ podman_exec }} {{ create_user }}"
+  when: is_up.rc == 0
+  register: user_created
 
+# TODO
 - debug:
     msg: "{{ podman_exec }} {{ default_install }}"
-
-- debug:
-    msg: "{{ podman_exec }} {{ create_user }}"
